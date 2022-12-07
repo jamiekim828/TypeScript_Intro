@@ -1,5 +1,5 @@
 import React from "react";
 
-export default function userList() {
+export default function UserList() {
   return <div>User</div>;
 }
