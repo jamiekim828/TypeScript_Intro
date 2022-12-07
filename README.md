@@ -9,3 +9,8 @@
 
 1. Pass the `userList` array from `App` component to `UserList` component
 2. Display the user information in `UserItem` component
+
+## Example
+
+The final result should look like the screenshot below
+![example](./src/assets/example.png)
