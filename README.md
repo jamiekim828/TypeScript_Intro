@@ -14,5 +14,8 @@
 ## Example
 
 The final result should look like the screenshot below
-![example](./src/assets/example.png)
-![advanced](./src/assets/advanced.png)
+
+1. The user list
+   ![example](./src/assets/example.png)
+2. The user list with address detail
+   ![advanced](./src/assets/advanced.png)
