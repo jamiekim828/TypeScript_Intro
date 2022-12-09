@@ -30,7 +30,7 @@ export default function UserItem({ user }: PropType) {
         <ul>
           {keys.map((u) => {
             return (
-              <li>
+              <li key={u}>
                 {`${u}`} : {`${userAddress[u]}`}
               </li>
             );

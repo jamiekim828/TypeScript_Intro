@@ -29,7 +29,7 @@ export default function UserList({ user }: { user: UserType[] }) {
       </div>
       <div className='user-wrapper'>
         {user.map((user) => (
-          <UserItem user={user} />
+          <UserItem user={user} key={user.name} />
         ))}
       </div>
     </div>
