@@ -1,7 +1,7 @@
 import React from 'react';
 import UserItem from './UserItem';
 
-type UserType = {
+export type UserType = {
   id: number;
   name: string;
   username: string;

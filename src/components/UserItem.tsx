@@ -1,26 +1,20 @@
 import React from 'react';
+import { UserType } from './UserList';
 
-type UserType = {
-  id: number;
-  name: string;
-  username: string;
-  email: string;
-  address: {
+type PropType = {
+  user: UserType;
+};
+
+export default function UserItem({ user }: PropType) {
+  type A = {
     street: string;
     suite: string;
     city: string;
     zipCode: string;
   };
-  phone: string;
-  website: string;
-  company: {
-    name: string;
-    catchPhrase: string;
-    bs: string;
-  };
-};
+  const userAddress: A = user.address;
+  const keys = Object.keys(userAddress) as (keyof A)[];
 
-export default function UserItem({ user }: { user: UserType }) {
   return (
     <div className='user'>
       <img
@@ -34,10 +28,13 @@ export default function UserItem({ user }: { user: UserType }) {
       <div className='address'>
         Address:{' '}
         <ul>
-          <li>street: {user.address.street}</li>
-          <li>suite: {user.address.suite}</li>
-          <li>city: {user.address.city}</li>
-          <li>zipcode: {user.address.zipCode}</li>
+          {keys.map((u) => {
+            return (
+              <li>
+                {`${u}`} : {`${userAddress[u]}`}
+              </li>
+            );
+          })}
         </ul>
       </div>
     </div>
